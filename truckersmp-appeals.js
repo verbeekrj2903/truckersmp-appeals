@@ -1,12 +1,11 @@
 // ==UserScript==
-// @name         TruckersMP Reports Improved
+// @name         TruckersMP Appeals Improved
 // @description  Only for TruckersMP Admins
 // @namespace    http://truckersmp.com/
-// @version      1.4.0
+// @version      0.0.1
 // @author       CJMAXiK
-// @match        *://truckersmp.com/*/reports/view/*
-// @homepageURL  https://openuserjs.org/scripts/cjmaxik/TruckersMP_Reports_Improved
-// @require      https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js
+// @match        *://truckersmp.com/*/appeals/view/*
+// @homepageURL  https://openuserjs.org/scripts/cjmaxik/TruckersMP_Appeals_Improved
 // @require      https://cdnjs.cloudflare.com/ajax/libs/jquery-storage-api/1.7.5/jquery.storageapi.min.js
 // @run-at       document-idle
 // @grant        GM_xmlhttpRequest
@@ -17,24 +16,9 @@
 // ==/OpenUserJS==
 /* jshint -W097 */
 'use strict';
-var version = "1.4.0";
-console.log("TruckersMP Reports Improved INBOUND! Question - to @cjmaxik on Slack!");
-$('body > div.wrapper > div.breadcrumbs > div > h1').append(' Improved <span class="badge" data-toggle="tooltip" title="by @cjmaxik">' + version + '</span> <a href="#" data-toggle="modal" data-target="#script-settings"><i class="fa fa-cog" data-toggle="tooltip" title="Script settings"></i></a> <a href="http://bit.ly/BlameAnybody" target="_blank" id="version_detected" data-toggle="popover" data-trigger="focus" title="YAY! v.' + version + ' has been deployed!" data-content="Your handy-dandy script just updated! See what you get?"><i class="fa fa-question" data-toggle="tooltip" title="Changelog"></i></a> <i class="fa fa-spinner fa-spin" id="loading-spinner"></i>');
-
-
-// ===== Bootstrapping =====
-var now = moment();
-
-var date_buttons = '<br>' +
-    '<button type="button" class="btn btn-default plusdate" data-plus="1day">+1 day</button>' +
-    '<button type="button" class="btn btn-default plusdate" data-plus="3day">+3</button>     ' +
-    '<button type="button" class="btn btn-warning plusdate" data-plus="1week">+1 week</button>     ' +
-    '<button type="button" class="btn btn-danger plusdate" data-plus="1month">+1 month</button>' +
-    '<button type="button" class="btn btn-danger plusdate" data-plus="3month">+3</button>' +
-    '<button type="button" class="btn btn-xs btn-link plusdate" data-plus="clear">Current time</button>';
-
-$(date_buttons).insertAfter('#confirm-accept > div > div > form > div.modal-body > div:nth-child(5) > label:nth-child(4)');
-$('input[id="perma.false"]').prop("checked", true);
+var version = "0.0.1";
+console.log("TruckersMP Appeals Improved INBOUND! Question - to @cjmaxik on Slack!");
+$('body > div.wrapper > div.breadcrumbs > div > h1').append(' Improved <span class="badge" data-toggle="tooltip" title="by @cjmaxik">' + version + '</span> <a href="#" data-toggle="modal" data-target="#script-settings"><i class="fa fa-cog" data-toggle="tooltip" title="Script settings"></i></a> <a href="https://github.com/cjmaxik/truckersmp-appeals" target="_blank" id="version_detected" data-toggle="popover" data-trigger="focus" title="YAY! v.' + version + ' has been deployed!" data-content="Your handy-dandy script just updated! See what you get?"><i class="fa fa-question" data-toggle="tooltip" title="Changelog"></i></a> <i class="fa fa-spinner fa-spin" id="loading-spinner"></i>');
 
 // ===== Links in content =====
 $('.content').each(function(){
